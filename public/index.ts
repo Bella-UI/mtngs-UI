@@ -8,4 +8,3 @@ function loopcards (){
         return cards.innerText = `${i++}`;
     }
 }
-
