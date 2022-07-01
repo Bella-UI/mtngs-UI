@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mtngs.io - Contact</title>
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="shortcut icon" href="./icons/favicon2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="navbar navbar__top">
+        <div class="navbar__top__left-side">
+            <a class="navbar__links link__text" href="./index.html"><img class="img__logo" src="./imgs/logo.png" alt="logo"></a>
+            <a class="navbar__links link__text" href="./index.html">Home</a>
+            <a class="navbar__links link__text" href="#featured-meetings">Featurd meetings</a>
+            <a class="navbar__links link__text" href="#open-meetings">Open Meetings</a>
+            <a class="navbar__links link__text" href="#FAQ">FAQ</a>
+        </div>
+        <div class="navbar__top__right-side">
+            <a class="navbar__links link__text" href="./contribute.html">Contribute</a>
+            <a href="./contact.html">
+                <select class=" navbar__links link__select" name="Contact" id="Contact">
+                    <option value="" disabled selected>Contact us</option>
+                    <option value="">add meeting</option>
+                    <option value="">report an error</option>
+                    <option value="">Other reason</option>
+                </select>
+            </a>
+            <a class="link__text" href="./org.html">
+                <button class="btn btn__filled">Browse all meetings</button></a>
+            <img class="btn__menu-mobile" src="./icons/menu-mobile-icon.svg" alt="menu-mobile ">
+        </div>
+    </header>
+
+    <div class="wrapper wrapper__contact wrapper__all">
+        <h2 class="title__h2 ">Contact us</h2>
+
+        <form class="card form" onsubmit="handleContact(event)">
+            <label for="name">What is your name?
+                <input class="form__input" type="text" name="name">
+            </label>
+
+            <label for="email">Please enter your email
+                <input class="form__input" type="email" name="email">
+            </label>
+
+            <label for="conatct">Select the reason for contacting
+                <select class="form__input" name="Contact" id="Contact">
+                    <option class="form__input" value="" disabled selected>Contact us</option>
+                    <option class="form__input" value="">add meeting</option>
+                    <option class="form__input" value="">report an error</option>
+                    <option class="form__input" value="">Other reason</option>
+                </select>
+            </label>
+
+            <label for="textarea">Tell us why you're contacting us in a few words
+                <textarea class="form__input" name="textarea" rows="4" cols="50">Write here</textarea>
+            </label>
+            <a class="link__text" href="./success.html">
+                <button class="btn btn__outlined__form" type="submit">Send massage</button>
+            </a>
+        </form>
+    </div>
+
+
+
+    <footer class="navbar__bottom">
+        <p class="text__small colors__white">All rights reserved 2022 |
+            <a href="" class="colors__white">Powered by OptimeetAI</a>
+        </p>
+    </footer>
+
+
+    <script src="./dist/index.js "></script>
+</body>
+
+</html>
