@@ -1,5 +1,5 @@
 * {
-    // box-sizing: border-box;
+    box-sizing: border-box;
     font-family: -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
 }
@@ -40,7 +40,7 @@
 }
 
 .navbar {
-    width: 100vw;
+    width: 100%;
     height: 100px;
     &__top {
         display: flex;
@@ -48,22 +48,23 @@
         background-color: #FFFFFF;
         box-shadow: 0px 8px 40px rgba(63, 120, 189, 0.12);
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         position: fixed;
         z-index: 100;
         &__left-side {
             display: flex;
             align-items: center;
-            width: 44rem;
-            justify-content: space-between;
-            padding: 0 2rem;
+            justify-content: flex-start;
+            padding: 0 44px;
+            gap: 40px;
         }
         &__right-side {
             display: flex;
             align-items: center;
-            width: 32rem;
-            justify-content: space-between;
-            padding: 0 2rem;
+            justify-content: flex-end;
+            gap: 16px;
+            padding: 0 44px;
+            gap: 40px;
         }
     }
     &__bottom {
@@ -139,6 +140,12 @@
 }
 
 .section {
+    &__in-article {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px;
+    }
     &__with-bg {
         width: 80%;
         height: 750px;
@@ -212,7 +219,6 @@
 
 .wrapper {
     &__all {
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -224,10 +230,46 @@
         justify-content: center;
         align-items: center;
         padding: 2rem 2rem 0 2rem;
+        &__flex-wrap {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 32px;
+        }
+    }
+    &__article {
+        padding: 140px 12%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 40px;
     }
     &__tags {
         display: flex;
         flex-wrap: wrap;
+    }
+    &__contact {
+        background-color: #F4F7FA;
+        padding: 120px 0 60px 0;
+        display: flex;
+        gap: 16px
+    }
+    &__success {
+        width: 100%;
+        height: 100vh;
+        background-color: #F4F7FA;
+        padding: 120px 0 60px 0;
+        display: flex;
+        gap: 16px
+    }
+    &__org {
+        padding: 140px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
     }
 }
 
@@ -242,6 +284,24 @@
     background: #F4F7FA;
     border-radius: 100px;
     color: #4472C4;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
+    &__input {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 16px;
+        width: 100%;
+        margin: 8px 0;
+        border-radius: 8px;
+        border: 1px solid #bed2e4;
+    }
 }
 
 .card {
@@ -263,6 +323,15 @@
             box-shadow: 2px 16px 56px rgba(51, 100, 161, 0.251);
             border: 1px solid #bed2e4;
         }
+    }
+    &__success {
+        padding: 44px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
     }
     &__colored {
         width: 100%;
@@ -307,6 +376,8 @@
         flex-direction: column;
         align-items: center;
         padding: 32px;
+        width: 350px;
+        height: 350px;
         gap: 32px;
         &:hover {
             box-shadow: 2px 16px 56px rgba(51, 100, 161, 0.251);
@@ -366,6 +437,10 @@
 .img {
     &__logo {
         width: 10rem;
+        &__org {
+            width: 140px;
+            height: 60px;
+        }
     }
     &__big {
         width: 28rem;
@@ -414,8 +489,24 @@
         padding: 1.2rem 2rem;
         border-radius: 100px;
         border: 6px solid #C6D5EC;
+        max-width: 27ch;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
         &:hover {
             border: 6px solid #4472C4;
+        }
+        &__form {
+            width: 100%;
+            background-color: white;
+            color: #4472C4;
+            padding: 1.2rem 2rem;
+            border-radius: 100px;
+            border: 6px solid #C6D5EC;
+            &:hover {
+                border: 6px solid #4472C4;
+            }
         }
     }
     &__menu-mobile {
