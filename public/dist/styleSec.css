@@ -1,11 +1,11 @@
-@media only screen and (min-width: 320px) and (max-width: 1025px) {
-  * {
-    box-sizing: border-box;
-    font-family: -apple-system, "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
-    scroll-behavior: smooth;
-    margin: 0;
-  }
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+}
 
+@media only screen and (min-width: 320px) {
   .colors__white {
     color: white;
   }
@@ -40,6 +40,11 @@
     height: 44px;
     padding: 8px;
   }
+  .img__exit-icon-mobile {
+    position: absolute;
+    right: 44px;
+    top: 44px;
+  }
 
   .link__text {
     text-decoration: none;
@@ -51,6 +56,17 @@
     background-color: transparent;
     font-size: 1rem;
     cursor: pointer;
+  }
+
+  .menu__mobile {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.901);
   }
 
   .btn {
@@ -197,7 +213,6 @@
   }
 
   .hero {
-    display: inline-flex;
     padding: 120px 0 50px 0;
     align-items: center;
     justify-content: center;
@@ -206,12 +221,13 @@
     gap: 32px;
   }
   .hero__grid {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 0 32px;
-    gap: 52px;
+    padding: 32px;
+    gap: 10px;
   }
   .hero__grid__left-side {
     display: flex;
