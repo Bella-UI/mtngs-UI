@@ -6,6 +6,10 @@
 }
 
 @media only screen and (min-width: 320px) {
+  .test {
+    width: 100%;
+  }
+
   .colors__white {
     color: white;
   }
@@ -66,9 +70,18 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.901);
+    background-color: white;
+    z-index: 1000000;
+    position: fixed;
   }
 
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .menu__mobile {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(22px);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
   .btn {
     font-weight: 600;
     font-size: 1rem;
